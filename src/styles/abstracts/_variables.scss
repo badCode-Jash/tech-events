@@ -34,9 +34,13 @@ $blue: hsl(200, 46%, 45%) !default;
 /// @type Color
 $green: hsl(145, 46%, 51%) !default;
 
-/// Light grey
+///Light grey
 /// @type Color
-$light-grey: hsl(216, 15%, 52%) !default;
+$light-grey: hsl(210, 38%, 95%) !default;
+
+/// Mid grey
+/// @type Color
+$mid-grey: hsl(216, 15%, 52%) !default;
 
 /// Dark grey
 /// @type Color
@@ -46,19 +50,13 @@ $dark-grey: hsl(0, 100%, 2%) !default;
 /// @type Color
 $white: hsl(0, 0%, 100%) !default;
 
-
+$branded-red: hsl(10, 61%, 49%) !default;
+$branded-orange: hsl(35, 100%, 48%) !default;
+$branded-blue: hsl(196, 100%, 34%) !default;
 
 $color-text-primary: $dark-grey;
-$color-text-secondary: $light-grey;
+$color-text-secondary: $mid-grey;
 $color-button-primary: $blue;
-
-
-/// Container's maximum width
-/// @type Length
-$max-width: 1180px !default;
-
-
-
 
 
 /// Breakpoints map
@@ -68,11 +66,7 @@ $breakpoints: ('small': 320px,
     'medium': 768px,
     'large': 1024px,
 ) !default;
-
-
-
-
-
+ 
 
 /// Relative or absolute URL where all assets are served from
 /// @type String

@@ -1,0 +1,15 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.checkbox {
+    display: inline;
+ 
+    & + span {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    @include on-event() {
+        outline: 1px solid $blue;
+    }
+}

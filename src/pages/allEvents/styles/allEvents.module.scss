@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    padding-top: 1.5rem;    
+
+    &__sidebar {
+        flex-grow: 1;        
+        flex-shrink: 2;
+    }
+
+    &__content {
+        flex-grow: 5;
+        flex-shrink: 3;
+    }
+}

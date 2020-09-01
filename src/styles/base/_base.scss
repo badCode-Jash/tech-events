@@ -25,11 +25,10 @@
    * Basic styles for links
    */
   a {
-    color: $brand-color;
+    color: $color-button-primary;
     text-decoration: none;
   
     @include on-event {
-      color: $text-color;
       text-decoration: underline;
     }
   }
