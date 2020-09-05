@@ -6,7 +6,7 @@ import styles from '../styles/allEvents.module.scss';
 import Textbox from '../../../components/textbox';
 import Checkbox from '../../../components/checkbox';
 import Filter from './filter';
-import EventItem from '../components/eventGroup';
+import EventItem from '../components/event-group';
 
 function AllEvents() {
     return <div className={styles["container"]}>

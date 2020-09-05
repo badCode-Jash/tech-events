@@ -9,8 +9,8 @@ import { DefaultLayout } from "../layouts";
 import SuspenseWithDefaultLoader from "./SuspenseWithLoader";
 import Navbar from "../components/nav";
 
-const AllEventsLazy = React.lazy(() => import('../pages/allEvents/containers'))
-const MyEventsLazy = React.lazy(() => import('../pages/myEvents/containers'))
+const AllEventsLazy = React.lazy(() => import('../pages/all-events/containers'))
+const MyEventsLazy = React.lazy(() => import('../pages/my-events/containers'))
 
 function Routing() {
   return (

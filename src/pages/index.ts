@@ -1,2 +1,2 @@
-export { AllEvents } from './allEvents'
-export { MyEvents } from './myEvents'
+export { AllEvents } from './all-events'
+export { MyEvents } from './my-events'

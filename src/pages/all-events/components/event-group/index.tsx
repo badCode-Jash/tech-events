@@ -6,12 +6,12 @@ import EventItem from './eventItem';
 
 const EventGroup: FunctionComponent = () => {
     return <div className={styles["event-group"]}>
-                <div className={styles["event-group__date-header"]}>
-                    <span>
-                        Sunday 14th July
-                    </span>
-                </div>
-                <EventItem />
+        <div className={styles["event-group__date-header"]}>
+            <span>
+                Sunday 14th July
+            </span>
+        </div>
+        <EventItem />
     </div>
 }
 
