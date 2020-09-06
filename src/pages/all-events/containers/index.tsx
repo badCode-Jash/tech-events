@@ -7,12 +7,13 @@ import Textbox from '../../../components/textbox';
 import Checkbox from '../../../components/checkbox';
 import Filter from './filter';
 import EventItem from '../components/event-group';
+import EventList from './eventList';
 
 function AllEvents() {
     return <div className={styles["container"]}>
         <Filter />
         <Content className={styles["container__content"]} >
-            <EventItem />
+            <EventList />
         </Content>
     </div>
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import Logo from './logo';
 
 import styles from './styles/nav.module.scss';
-import NavbarItem from './navbarItem';
-import { Link } from 'react-router-dom';
+import NavbarItem from './navbarItem'; 
 
 const Navbar = () => {
     return <nav className={styles["nav"]}>

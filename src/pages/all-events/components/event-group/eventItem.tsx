@@ -3,8 +3,13 @@ import Button from '../../../../components/button/button';
 import Badge from '../../../../components/badge';
 
 import styles from './styles/eventItem.module.scss';
+import { CEvent } from '../../../../models';
 
-const EventItem: FunctionComponent = () => {
+interface EventItemProps {
+    event: CEvent
+}
+
+const EventItem: FunctionComponent<EventItemProps> = () => {
     return <div className={styles["event-item"]}>
         <div>
             <div>
