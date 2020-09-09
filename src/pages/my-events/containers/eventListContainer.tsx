@@ -1,9 +1,9 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMyEventsAsyncActions, fetchMyEventsAction } from '../../../store/event/actions';
-import { getAllGroupedEvents, getAllEventsCount, getEventsOrCitiesLoading, getMyGroupedEvents } from '../../../store/event/selectors';
+import { fetchMyEventsAction } from '../../../store/event/actions';
+import { getAllEventsCount, getEventsOrCitiesLoading, getMyGroupedEvents } from '../../../store/event/selectors';
 import PageLoader from '../../../components/ui/loaders/pageLoader';
-import { signUpEventAsyncActions, cancelEventAsyncActions, signUpEventAction, cancelEventAction } from '../../../store/user/actions';
+import { signUpEventAction, cancelEventAction } from '../../../store/user/actions';
 import { hideModal, showConfirmationModal } from '../../../components/ui/modal';
 import { getUser } from '../../../store/user/selectors';
 import EventList from '../../../containers/event/eventList';
@@ -18,9 +18,9 @@ const EventListContainer: FunctionComponent<EventListContainerProps> = ({ filter
     const user = useSelector(getUser);
     const eventList = useSelector(getMyGroupedEvents);
     const eventsOrCitiesLoading = useSelector(getEventsOrCitiesLoading);
-    const allEventCount = useSelector(getAllEventsCount); 
+    const allEventCount = useSelector(getAllEventsCount);
     const [currentPage, setCurrentPage] = useState(1);
-    
+
     useEffect(() => {
         if (!!user) {
             dispatch(fetchMyEventsAction({

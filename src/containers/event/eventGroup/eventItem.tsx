@@ -53,9 +53,9 @@ const EventItem: FunctionComponent<EventItemProps> = ({ event, onCancelButtonCli
             </div>
         </div>
         <div>
-            <span><span>🗺️</span> {cityName}</span>
-            <span><span>⌛</span> {event.$duration}'</span>
-            <span><span>⏰</span> {event.$formattedEventHours}</span>
+            <span><span role="img" aria-label="World map">🗺️</span> {cityName}</span>
+            <span><span role="img" aria-label="Sand clock">⌛</span> {event.$duration}'</span>
+            <span><span role="img" aria-label="Alarm clock">⏰</span> {event.$formattedEventHours}</span>
         </div>
     </div>
 }

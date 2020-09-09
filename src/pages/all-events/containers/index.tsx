@@ -6,7 +6,6 @@ import Filter from '../../../containers/event/filter';
 import EventListContainer from './eventListContainer';
 import Sidebar from '../../../layouts/sidebar';
 import { IFilterData } from '../../../models';
-import { useDispatch } from 'react-redux';
 
 function AllEvents() {
     const [filterParams, setFilterParams] = useState<IFilterData>({

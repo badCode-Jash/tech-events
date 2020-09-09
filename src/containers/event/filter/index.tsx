@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useState, useRef } from 'react'
-import Sidebar from '../../../layouts/sidebar'
 import Textbox from '../../../components/ui/textbox'
 import Checkbox from '../../../components/ui/checkbox'
 

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, forwardRef, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import styles from './styles/modal.module.scss';
 import cs from 'classnames';
 import ConfirmationModalContent from './modalContents/confirmation/confirmation';

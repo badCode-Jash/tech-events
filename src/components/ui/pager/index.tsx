@@ -14,11 +14,11 @@ export type Direction = "<" | ">" | "<<" | ">>";
 
 const Pager: FunctionComponent<PagerProps> = ({ count, currentPage, onPageChanged }) => {
 
-    
+
     const countOfPagerElement = Math.round((count - 1) / PAGINATION_MINIMUM_FETCH_VALUE);
-    
+
     if (!count || countOfPagerElement < 2) return <></>
-    
+
     const arrays = createLeftAndRightSideArray(countOfPagerElement, currentPage);
     const isItemSelected = (item: number) => currentPage === item;
 
@@ -43,17 +43,15 @@ const Pager: FunctionComponent<PagerProps> = ({ count, currentPage, onPageChange
     const reachedBeginning = currentPage === 1;
 
     function renderPagerElements(arr: number[]) {
-        {
-            if(!arr.length) return <></>;
+        if (!arr.length) return <></>;
 
-            return arr.map((item, index) => {
-                return <PagerElement
-                    key={pagerElementKeyExtractor(item, index)}
-                    onClick={pagerElementClicked}
-                    isSelected={isItemSelected(item)}
-                    page={item} />
-            })
-        }
+        return arr.map((item, index) => {
+            return <PagerElement
+                key={pagerElementKeyExtractor(item, index)}
+                onClick={pagerElementClicked}
+                isSelected={isItemSelected(item)}
+                page={item} />
+        })
     }
 
     function renderDirectionPagerElements(direction: Direction, isDisabled: boolean) {

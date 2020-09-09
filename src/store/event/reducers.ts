@@ -1,6 +1,6 @@
 import { fetchAllEventsAsyncActions, fetchAllCitiesAsyncActions, fetchMyEventsAsyncActions } from "./actions"
 import { createReducer } from "typesafe-actions"
-import { CEvent, CCity, IEventData, ICityData } from "../../models"
+import { IEventData, ICityData } from "../../models"
 
 export interface EventState {
     events: IEventData[],

@@ -1,6 +1,6 @@
 import { fetchUserAsyncActions, cancelEventAsyncActions, signUpEventAsyncActions } from "./actions"
 import { createReducer } from "typesafe-actions"
-import { CUser, IUserData } from "../../models"
+import { IUserData } from "../../models"
 
 export interface UserState {
     user: IUserData | null,

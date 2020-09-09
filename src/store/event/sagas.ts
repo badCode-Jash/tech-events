@@ -1,6 +1,6 @@
 import { eventApi, cityApi } from '../../api';
 import { ICityData, IEventsAndCount } from '../../models';
-import { takeLatest, call, put, all } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
 import {
     fetchAllEventsAsyncActions,
     fetchAllCitiesAsyncActions,

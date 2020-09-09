@@ -1,14 +1,10 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllEventsAsyncActions, fetchAllEventsAction } from '../../../store/event/actions';
-import { getAllGroupedEvents, getAllEventsCount, getEventsOrCitiesLoading, getAllCities } from '../../../store/event/selectors';
+import { fetchAllEventsAction } from '../../../store/event/actions';
+import { getAllGroupedEvents, getAllEventsCount, getEventsOrCitiesLoading } from '../../../store/event/selectors';
 import PageLoader from '../../../components/ui/loaders/pageLoader';
-import EventGroup from '../../../containers/event/eventGroup';
-import { signUpEventAsyncActions, cancelEventAsyncActions, signUpEventAction, cancelEventAction } from '../../../store/user/actions';
-import Pager from '../../../components/ui/pager';
-import styles from '../styles/allEvents.module.scss';
-import { showModal, hideModal, showConfirmationModal } from '../../../components/ui/modal';
-import ConfirmationModalContent from '../../../components/ui/modal/modalContents/confirmation/confirmation';
+import { signUpEventAction, cancelEventAction } from '../../../store/user/actions';
+import { hideModal, showConfirmationModal } from '../../../components/ui/modal';
 import EventList from '../../../containers/event/eventList';
 import { IFilterData } from '../../../models';
 
@@ -33,7 +29,7 @@ const EventListContainer: FunctionComponent<EventListContainerProps> = ({ filter
             hideModal();
         });
     }
-    
+
     const cancelEvent = (eventId: number) => {
         dispatch(cancelEventAction(eventId))
     }
@@ -44,7 +40,7 @@ const EventListContainer: FunctionComponent<EventListContainerProps> = ({ filter
     };
 
     const loadData = (page?: number) => {
-        dispatch(fetchAllEventsAction({page: page || currentPage, filterParams}))
+        dispatch(fetchAllEventsAction({ page: page || currentPage, filterParams }))
     }
 
     if (!eventList)

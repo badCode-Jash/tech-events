@@ -1,10 +1,8 @@
 import { RootState } from "typesafe-actions";
 import { createSelector } from 'reselect';
 import map from 'lodash/map';
-import orderBy from 'lodash/orderBy';
 import groupBy from 'lodash/groupBy';
-import { formatEventDate } from "../../utils/datetime";
-import { CCity, CEvent, IEventData } from "../../models";
+import { CCity, CEvent } from "../../models";
 import { getUser } from "../user/selectors";
 
 const getAllCities = (state: RootState) => state.event.cities && map(state.event.cities, cityData => new CCity(cityData));

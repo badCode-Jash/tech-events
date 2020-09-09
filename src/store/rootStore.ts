@@ -1,5 +1,4 @@
 import { createStore, Middleware, Store, compose, applyMiddleware } from 'redux';
-import reduxFreeze from 'redux-freeze';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
 import rootReducer from './rootReducer';
