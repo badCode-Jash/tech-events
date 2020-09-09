@@ -1,0 +1,39 @@
+@import '../../../../styles/abstracts/variables';
+
+.pager {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    &__element {
+        &__button {
+
+        border-width: 0.1rem;
+        padding: 0rem 1rem;
+        height: 2.5rem !important;
+
+          &--left {
+            border-right-width: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }  
+
+          &--right {
+            border-left-width: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+            &--middle {
+                    border-left-width: 0;
+                    border-right-width: 0;
+                    border-radius: 0;
+
+                    &:disabled {
+                        border-color: $blue;
+                        opacity: 1;
+                    }
+            }
+        }
+    }
+}

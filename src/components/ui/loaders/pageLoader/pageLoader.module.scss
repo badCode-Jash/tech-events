@@ -1,0 +1,26 @@
+@import '../../../../styles/abstracts/variables';
+
+.page-loader {
+    background-color: rgba($white, 0.5);
+    min-width: 100vw;
+    min-height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: $z-index-loader;
+
+    .loader-text {
+        font-size: 14px;
+        margin-top: 8px;
+        line-height: 1.25;
+        text-align: center
+    }
+}

@@ -1,19 +1,30 @@
-import React from 'react';
-import Sidebar from '../../../layouts/sidebar';
+import React, { useState } from 'react';
 import Content from '../../../layouts/content';
 
 import styles from '../styles/allEvents.module.scss';
-import Textbox from '../../../components/textbox';
-import Checkbox from '../../../components/checkbox';
-import Filter from './filter';
-import EventItem from '../components/event-group';
-import EventList from './eventList';
+import Filter from '../../../containers/event/filter';
+import EventListContainer from './eventListContainer';
+import Sidebar from '../../../layouts/sidebar';
+import { IFilterData } from '../../../models';
+import { useDispatch } from 'react-redux';
 
 function AllEvents() {
+    const [filterParams, setFilterParams] = useState<IFilterData>({
+        city: "",
+        name: "",
+        afternoon: false,
+        evening: false,
+        free: false,
+        morning: false,
+        night: false
+    })
+ 
     return <div className={styles["container"]}>
-        <Filter />
+        <Sidebar side="left">
+            <Filter defaultFilterParams={filterParams} onFilterChanged={setFilterParams} />
+        </Sidebar>
         <Content className={styles["container__content"]} >
-            <EventList />
+            <EventListContainer filterParams={filterParams} />
         </Content>
     </div>
 }

@@ -58,6 +58,7 @@ $color-text-primary: $dark-grey;
 $color-text-secondary: $mid-grey;
 $color-button-primary: $blue;
 
+$modal-wrapper-background-color: #0e0e0ea6;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
@@ -73,3 +74,7 @@ $breakpoints: ('small': 320px,
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+$z-index-dropdown: 3;
+$z-index-modal: 5;
+$z-index-loader: 8;

@@ -7,7 +7,7 @@ import {
 
 import { DefaultLayout } from "../layouts";
 import SuspenseWithDefaultLoader from "./SuspenseWithLoader";
-import Navbar from "../components/nav";
+import Navbar from "../components/ui/nav";
 
 const AllEventsLazy = React.lazy(() => import('../pages/all-events/containers'))
 const MyEventsLazy = React.lazy(() => import('../pages/my-events/containers'))

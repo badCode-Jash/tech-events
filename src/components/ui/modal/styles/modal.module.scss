@@ -1,0 +1,38 @@
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/animations/fade';
+
+.modal-wrapper {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: $modal-wrapper-background-color;
+
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 35%;
+        height: 300px;
+
+        background-color: $white;
+        border-radius: 0.3rem;
+        z-index: $z-index-modal;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 2rem;
+
+        &.fadeIn {
+            animation-name: fadeIn;
+            animation-duration: 0.75s;
+        }
+    }
+}

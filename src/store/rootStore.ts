@@ -3,6 +3,7 @@ import reduxFreeze from 'redux-freeze';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './rootSaga';
 import rootReducer from './rootReducer';
+import errorHandler from './middlewares/errorLogger';
 
 function rootStore(initialState: any) {
     const middlewares: Middleware[] = [];
@@ -14,7 +15,7 @@ function rootStore(initialState: any) {
 
     if(process.env.NODE_ENV === "development") {
         //Add development middlewares
-        middlewares.push(reduxFreeze);
+        middlewares.push(errorHandler);
 
         composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || composeEnhancers;
     }

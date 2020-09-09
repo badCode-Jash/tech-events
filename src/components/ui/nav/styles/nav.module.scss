@@ -1,0 +1,36 @@
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/abstracts/mixins';
+
+.nav {
+
+    $p: &;
+
+    height: 70px;
+    width: 100vw;
+    background-color: $white;
+    padding: 0px 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        height: 100%;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+
+    &__items {
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        #{$p}__item {
+            font-size: 1rem;
+            font-weight: 500;
+            padding-left: 10px;
+            color: $color-text-primary;
+        }
+    }
+}

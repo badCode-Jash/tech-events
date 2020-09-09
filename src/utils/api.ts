@@ -18,11 +18,16 @@ export async function request(url: URL, method: HTTPMethod, body?: any, headers?
     var response = await fetch(url.toString(), {
         method,
         headers: headers || defaultHeaders,
-        body
+        body: JSON.stringify(body)
     });
 
     if(response.ok)
-        return response.json();
+        return new Promise((resolve, reject) => {
+            //Mimik slow connection
+            setTimeout(function() {
+                resolve(response.json())
+            }, 1500)
+        });
     else
         throw response;
 };

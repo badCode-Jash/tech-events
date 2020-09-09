@@ -1,42 +1,51 @@
-export class CEvent implements IEventData {
-    private _id: number;
-    private _isFree: boolean;
-    private _name: string;
-    private _city: number;
-    private _startDate: Date;
-    private _endDate: Date;
+import { formatDurationInMinutes, formatEventHours } from "../utils/datetime";
+export class CEvent {
+    private id: number;
+    private isFree: boolean;
+    private name: string;
+    private city: number; 
+    private startDate: Date;
+    private endDate: Date;
 
     public constructor(params: IEventData) {
-        this._id = params.id;
-        this._isFree = params.isFree;
-        this._name = params.name;
-        this._city = params.city;
-        this._startDate = params.startDate;
-        this._endDate = params.endDate;
+        this.id = params.id;
+        this.isFree = params.isFree;
+        this.name = params.name;
+        this.city = params.city; 
+        this.startDate = new Date(params.startDate);
+        this.endDate = new Date(params.endDate);
     }
 
-    get id() {
-        return this._id;
+    get $id() {
+        return this.id;
     }
 
-    get isFree() {
-        return this._isFree;
+    get $isFree() {
+        return this.isFree;
     }
 
-    get name() {
-        return this._name;
+    get $name() {
+        return this.name;
     }
 
-    get city() {
-        return this._city;
+    get $city() {
+        return this.city;
+    } 
+
+    get $startDate() {
+        return this.startDate;
     }
 
-    get startDate() {
-        return this._startDate;
+    get $endDate() {
+        return this.endDate;
     }
 
-    get endDate() {
-        return this._endDate;
+    get $duration() { 
+        return formatDurationInMinutes(this.startDate, this.endDate);
+    }
+
+    get $formattedEventHours() {
+        return formatEventHours(this.startDate, this.endDate);
     }
 }
 
@@ -47,4 +56,19 @@ export interface IEventData {
     city: number;
     startDate: Date;
     endDate: Date;
+}
+
+export interface IEventsAndCount { 
+    events: IEventData[], 
+    count: number 
+}
+
+export interface IFilterData {
+    name?: string,
+    city?: string,
+    free: boolean,
+    morning: boolean,
+    afternoon: boolean,
+    evening: boolean,
+    night: boolean
 }

@@ -1,0 +1,15 @@
+@import '../../../styles/abstracts/variables';
+
+.container {
+    display: flex;
+    padding-top: 1.5rem;
+
+    &__event-list {
+        padding-bottom: 3rem;
+
+        & >.info {
+            color: $mid-grey;
+            font-size: 1rem;
+        }
+    }
+}

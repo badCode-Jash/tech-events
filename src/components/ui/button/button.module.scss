@@ -1,0 +1,71 @@
+@import '../../../styles/abstracts/variables';
+
+.button {
+  @import 'node_modules/buttono/buttono';
+
+  $buttono-padding: 0.5rem 1rem;
+  $buttono-color-alt: #030315;
+  $buttono-border-radius: 0.25rem;
+  $buttono-transition-duration: 0.2s;
+
+  @include buttono-block($display: inline-flex);
+
+  // Extra styles
+  align-items: center;
+  font-weight: 600;
+
+  &--outline-primary {
+    @include buttono-style-modifier($color: $blue,
+      $color-disabled: #999,
+      $border-width: 0.2rem,
+      $border-color: $blue,
+      $background-color: $white,
+      $background-color-hover: $blue,
+      $border-color-disabled: rgba($blue, 0.5),
+    );
+  }
+
+  &--outline-danger {
+    @include buttono-style-modifier($color: $branded-red,
+      $color-disabled: #999,
+      $border-width: 0.2rem,
+      $border-color: $branded-red,
+      $background-color: $white,
+      $background-color-hover: $branded-red,
+      $border-color-disabled: rgba($branded-red, 0.5),
+    );
+  }
+
+  &--filled-primary {
+    @include buttono-style-modifier($color: $white,
+      $color-disabled: #999,
+      $border-width: 0.2rem,
+      $border-color: $blue,
+      $background-color: $blue,
+      $background-color-hover: $blue,
+      $border-color-disabled: rgba($blue, 0.5),
+    );
+  }
+
+  &--filled-success {
+    @include buttono-style-modifier($color: $white,
+      $color-disabled: #999,
+      $border-width: 0.2rem,
+      $border-color: $green,
+      $background-color: $green,
+      $background-color-hover: $green,
+      $border-color-disabled: rgba($green, 0.5),
+    );
+  }
+
+  &--filled-default {
+    @include buttono-style-modifier($color: $white,
+      $color-disabled: #999,
+      $border-width: 0.2rem,
+      $border-color: $mid-grey,
+      $background-color: $mid-grey,
+      $background-color-hover: $mid-grey,
+      $border-color-disabled: rgba($mid-grey, 0.5),
+    );
+  }
+}
